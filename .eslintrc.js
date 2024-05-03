@@ -1,0 +1,76 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'next',
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+  rules: {
+    'no-unused-vars': 'error',
+    'no-console': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/jsx-fragments': 'error',
+    'react/display-name': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    "react/self-closing-comp": "warn",
+    "react/jsx-sort-props": "warn",  
+    'react/jsx-curly-brace-presence': [
+      'warn',
+      { props: 'never', children: 'never' },
+    ],
+    "react/function-component-definition": [
+      "warn",
+      { namedComponents: "arrow-function" },
+    ],
+    '@typescript-eslint/no-unused-vars': 'error',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],  
+    'simple-import-sort/exports': 'warn',
+    'simple-import-sort/imports': [
+      'warn',
+      {
+        groups: [
+          ['^@?\\w', '^\\u0000'],
+          ['^.+\\.s?css$'],
+          ['^#/lib'],
+          ['^#/data'],
+          ['^#/components'],
+          ['^#/store'],
+          ['^#/'],
+          [
+            '^\\./?$',
+            '^\\.(?!/?$)',
+            '^\\.\\./?$',
+            '^\\.\\.(?!/?$)',
+            '^\\.\\./\\.\\./?$',
+            '^\\.\\./\\.\\.(?!/?$)',
+            '^\\.\\./\\.\\./\\.\\./?$',
+            '^\\.\\./\\.\\./\\.\\.(?!/?$)',
+          ],
+          ['^#/types'],
+          ['^'],
+        ],
+      },
+    ],
+  },
+  globals: {
+    React: true,
+    JSX: true,
+  },
+};
