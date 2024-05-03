@@ -1,0 +1,19 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:recommended", "group:all"],
+    "packageRules": [
+      {
+        "automerge": true,
+        "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+      },
+      {
+        "automerge": true,
+        "matchDepTypes": ["devDependencies"]
+      }
+    ],
+    "platformAutomerge": true,
+    "prConcurrentLimit": 5,
+    "prHourlyLimit": 0,
+    "schedule": ["every weekend"],
+    "timezone": "Europe/Paris"
+  }
