@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports', 'prettier'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'unused-imports',
+    'prettier',
+  ],
   extends: [
     'eslint:recommended',
     'next',
@@ -20,15 +25,15 @@ module.exports = {
     'react/jsx-fragments': 'error',
     'react/display-name': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    "react/self-closing-comp": "warn",
-    "react/jsx-sort-props": "warn",  
+    'react/self-closing-comp': 'warn',
+    'react/jsx-sort-props': 'warn',
     'react/jsx-curly-brace-presence': [
       'warn',
       { props: 'never', children: 'never' },
     ],
-    "react/function-component-definition": [
-      "warn",
-      { namedComponents: "arrow-function" },
+    'react/function-component-definition': [
+      'warn',
+      { namedComponents: 'arrow-function' },
     ],
     '@typescript-eslint/no-unused-vars': 'error',
     'unused-imports/no-unused-imports': 'error',
@@ -40,7 +45,7 @@ module.exports = {
         args: 'after-used',
         argsIgnorePattern: '^_',
       },
-    ],  
+    ],
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': [
       'warn',
